@@ -18,3 +18,11 @@ if image is not None:
 
     _ , enc = cv2.imencode('.jpg', img_gray)
     st.download_button('Download B&W Image', enc.tobytes(), 'bw_image.jpg', 'image/jpeg')
+    hide_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
